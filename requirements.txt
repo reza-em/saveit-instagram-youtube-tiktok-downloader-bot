@@ -1,0 +1,9 @@
+requests
+yt-dlp
+yt-dlp-ejs
+gallery-dl
+imageio-ffmpeg
+Pillow
+shazamio
+audioop-lts; python_version>='3.13'
+ytmusicapi

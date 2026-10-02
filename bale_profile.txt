@@ -1,0 +1,35 @@
+SaveIt on Bale — profile to paste in Bale's @botfather (the Bot API answers 501 'Not Implemented' for setMyName / setMyDescription / setMyShortDescription)
+Bot: @saveit_downloader_bot  https://ble.ir/saveit_downloader_bot
+Logo: bale_logo.jpg (same circular glowing logo as Telegram)
+Automatic: the command list (/start /help /lang /plans /me /invite /music /theme /about) is set by the bot itself.
+
+=== NAME / نام ===
+سیو‌ایت | SaveIt   (16 chars)
+
+=== ABOUT / درباره (فارسی) ===
+📥 دانلود یوتیوب، اینستاگرام، تیک‌تاک، تردز، توییتر/ایکس، لینکدین، ساندکلود + شناسایی آهنگ 🎶 💬 @example_owner
+(107 chars, limit 120)
+
+=== ABOUT (English) ===
+📥 Download YouTube, Instagram, TikTok, Threads, Twitter/X, LinkedIn, SoundCloud + song ID 🎶 💬 @example_owner
+(107 chars, limit 120)
+
+=== DESCRIPTION / توضیحات (فارسی) ===
+📥 به SaveIt خوش اومدی!
+🎬 لینک ویدیوی یوتیوب (شورت یا بلند)، ریلز و پست و استوری و هایلایت اینستاگرام، تیک‌تاک، تردز (Threads)، توییتر/ایکس (Twitter)، پینترست، لینکدین، ساندکلود و اسپاتیفای رو بفرست تا برات دانلود کنم
+🖼 عکس پروفایل، عکس و ویدیو، حتی فقط صدا
+🎶 ویس یا کلیپ بفرست تا آهنگش رو پیدا کنم
+⚡ سریع، ساده و رایگان
+شروع کن با /start 💖
+📢 برای تبلیغات به پشتیبانی پیام بدید: @example_owner
+(391 chars, limit 512)
+
+=== DESCRIPTION (English) ===
+📥 Welcome to SaveIt!
+🎬 Send a YouTube link (Shorts or long videos), Instagram posts, reels, stories and highlights, TikTok, Threads, Twitter/X, Pinterest, LinkedIn, SoundCloud or Spotify, and I'll download it for you
+🖼 Profile pictures, photos, videos, even audio only
+🎶 Send a voice/clip and I'll recognize the song
+⚡ Fast, simple and free
+Press /start to begin 💖
+📢 For advertising, contact support: @example_owner
+(414 chars, limit 512)
