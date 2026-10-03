@@ -1,6 +1,6 @@
 """Bale has no parse_mode: every text is Markdown (*bold*, _italic_, [t](url); the marks need a space outside them).
 Converts the HTML subset the bot uses (<b> <i> <code> <pre> <u> <a href>) to that Markdown. <code>/<pre>/<u> degrade to plain text.
-Risky characters are swapped for look-alikes. (Same converter as lumeh-shop-bot/transport.py.)"""
+Risky characters are swapped for look-alikes. (Same converter as the shop bot's transport.py.)"""
 import re, html
 
 _TAG = re.compile(r"<(/?)(b|strong|i|em|u|s|code|pre|a|blockquote)(?:\s+href=\"([^\"]*)\")?\s*>", re.I)

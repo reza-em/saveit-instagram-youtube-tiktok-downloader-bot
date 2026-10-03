@@ -1,6 +1,61 @@
+<!-- readme-top -->
+<div align="center">
+
+<img src="docs/banner.svg" alt="SaveIt — Instagram · YouTube · TikTok downloader bot" width="100%">
+
 # SaveIt — Instagram, YouTube & TikTok Downloader Bot for Telegram and Bale
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) ![Python 3](https://img.shields.io/badge/python-3-3776AB?logo=python&logoColor=white) ![Telegram](https://img.shields.io/badge/Telegram-bot-26A5E4?logo=telegram&logoColor=white) ![Bale](https://img.shields.io/badge/Bale-bot-1BBE8C) [![GitHub stars](https://img.shields.io/github/stars/reza-em/saveit-instagram-youtube-tiktok-downloader-bot?style=social)](https://github.com/reza-em/saveit-instagram-youtube-tiktok-downloader-bot/stargazers)
+
 > Telegram & Bale bot that downloads Instagram reels/stories, YouTube, TikTok (no watermark), Pinterest, LinkedIn, Threads and Twitter/X media. Persian + English, yt-dlp, gallery-dl, Python.
+
+**[فارسی](#-فارسی) · [English](#-english) · [Русский](#-русский) · [Deutsch](#-deutsch)**
+
+⭐ **If this project is useful to you, please give it a star** — it helps other people find it. [**Star on GitHub**](https://github.com/reza-em/saveit-instagram-youtube-tiktok-downloader-bot/stargazers) · 🍴 [Fork](https://github.com/reza-em/saveit-instagram-youtube-tiktok-downloader-bot/fork) · 🐛 [Issues](https://github.com/reza-em/saveit-instagram-youtube-tiktok-downloader-bot/issues)
+
+</div>
+
+## ✨ Highlights
+
+- 📸 **Instagram** posts, carousels, reels, stories, highlights and profile pictures
+- ▶️ **YouTube** Shorts and long videos with a quality ladder (1080/720/480/360) that auto-fits the 50 MB bot limit, plus MP3/M4A
+- 🎵 **TikTok** without watermark, Pinterest, LinkedIn, Threads and Twitter/X (public posts only)
+- 🎶 Shazam-like **music recognition**, music search, ID3 tags and lyrics
+- 🟦 **Telegram _and_ Bale** from one code base (one process per platform)
+- 🛠 Admin panel: per-platform quotas, plans, discount codes, forced-join channels, campaigns, broadcast
+- 🧪 Offline test-suite with a mocked Telegram API
+
+Public demo bot: <https://t.me/saveit_downloader_bot>
+
+> ⚖️ Please download only content you have the right to save and respect the terms of each platform and the rights of content owners.
+
+## 🎬 Demo
+
+<div align="center">
+<img src="docs/demo.gif" alt="Animated illustrative mockup of a SaveIt chat" width="320">
+</div>
+
+<div align="center">
+<img src="docs/screenshots.png" alt="Illustrative mockup screenshots of SaveIt" width="100%">
+</div>
+
+> 🖼 **These are illustrative mockups**, rendered locally from scripted conversations (see [`docs/mockups`](docs/mockups)). They are not real chats and contain no real user data; names, numbers and links are examples.
+
+## 🚀 Quick start
+
+```bash
+git clone https://github.com/reza-em/saveit-instagram-youtube-tiktok-downloader-bot.git && cd saveit-instagram-youtube-tiktok-downloader-bot
+python3 -m venv venv && ./venv/bin/pip install -r requirements.txt
+export DL_TELEGRAM_BOT_TOKEN=...               # from @BotFather (Telegram)
+export DL_BALE_BOT_TOKEN=...                   # optional, Bale
+export OWNER_USERNAME=your_telegram_username   # becomes admin on first /start
+./run.sh                                       # ./run_bale.sh for Bale
+./venv/bin/python test_offline.py
+```
+
+More options, admin panel and platform notes are in the sections below. Tokens are read only from environment variables — never commit them.
+
+---
 
 ## 🌐 فارسی
 
@@ -200,7 +255,7 @@ Invite screen states the live reward per invited friend and the friend's bonus (
 Everything a non-admin does is gated (`allowed()` in `bot.py`: every message incl. voice/audio, every callback, plain-text search, discount-code entry, plans, invite, downloads): the user must be a member of **all** configured channels (`getChatMember`, cached 60 s positive / 5 s negative); otherwise one URL button per *missing* channel + `✅ I joined` (re-checks live). Admins are exempt. If the bot lost access to a channel (not admin / chat gone) that channel is skipped (fail-open, nobody is locked out) and the owner is alerted at most once per 6 h.
 
 ## 🟦 Bale (same code base, `DL_PLATFORM=bale`) — running; `getMe`/`setMyCommands`/polling verified live
-Pattern taken from `lumeh-shop-bot` (`transport.py`): **one process per platform**, shared logic. `plat.py` holds the platform config, `core.py` adapts every Bot-API call (`bale_prepare`), `balefmt.py` converts our HTML subset to Bale Markdown.
+Pattern shared with the [shop bot](https://github.com/reza-em/multi-platform-shop-chatbot-telegram-bale) (`transport.py`): **one process per platform**, shared logic. `plat.py` holds the platform config, `core.py` adapts every Bot-API call (`bale_prepare`), `balefmt.py` converts our HTML subset to Bale Markdown.
 
 | | Telegram | Bale |
 |---|---|---|
